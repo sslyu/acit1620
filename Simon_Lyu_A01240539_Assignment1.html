@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<link href="flexbox.css" rel="stylesheet">
+
+<head>
+<style>
+body {
+  margin: 20px;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.content {
+  grid-area: content;
+  position: relative;
+}
+
+.header {
+  grid-area: header;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.wrapper {
+        display: grid;
+    grid-gap: 10px;
+        grid-template-columns: 200px 200px 200px;
+        grid-template-areas:
+    "header  header  header"
+        "sidebar content content"
+        "footer  footer  footer";
+        background-color: #fff;
+        color: #d3d3d3;
+    }
+
+
+.box {
+  background-color: #d3d3d3;
+  color:black;
+  padding: 10px;
+  font-size: 170%;
+  font-weight: 500;
+}
+
+.ul {
+  display: flex;
+}
+
+.list {
+  list-style-type: none;
+  text-align: center;
+}
+
+.list > li{
+  display: inline;
+  padding: 10px;
+}
+
+.title {
+  list-style-type: none;
+  text-align: center;
+}
+
+.title > li{
+  display: inline;
+  padding: 10px;
+}
+
+.sidebar {
+  background-color: #a9a9a9;
+}
+
+.header{
+    background-color: #836953;
+}
+
+.footer {
+  background-color: pink;
+  margin-bottom: 10%;
+}
+
+.topleft {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 3%;/*make more space between topright button and corner*/
+}
+
+.topright {
+  position: absolute;
+  top:0;
+  right: 0;
+  margin: 3% /*make more space between topright button and corner*/
+}
+
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.bottomright {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 7px 7px; /*make buttons have round edges*/
+}
+    .button1 {background-color: #4CAF50;}
+    .button2 {background-color: red;}
+    .button3 {background-color: #606060;}
+
+    .textform, .textarea {
+        text-align: center;
+        border-radius: 7px;
+        border: none;
+        margin: 8%; /*space between placeholder and buttons*/
+    }
+
+
+</style>
+</head>
+
+<body>
+  <div class="wrapper">
+      <div style="text-align: center" class="box header">Take Better Notes</div>
+      <div style= "text-align: left; font-size: 140%;" class="box sidebar">My Notes 
+        <ul>
+          <li style="font-size: small;">note one</li>
+          <li style="font-size: small;">note two</li>
+        </ul>
+      </div>
+      <div class="box main content">                                
+        <form class="textform" action="/action_page.php">
+        <textarea style="text-align: left;" class= "textarea" name="message" rows="5" cols="35">This is a placeholder</textarea>
+        <br><br>
+        <button class="button button1">Save</button>
+        <button class="button button2">Cancel</button>
+        </form>
+        
+          <div class="topleft">
+            <button class="button button1">New Note</button>
+          </div>
+
+          <div class="topright">
+            <button class="button button3">Dark Theme</button>
+          </div>
+        </div>
+
+      <div style="text-align: center; font-size: 140%; font-weight: 500; color: black;" class="title footer">Keep in Touch</div>
+        <ul style="text-align: center" class="box list footer">
+          <li><a href="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_circle_color-512.png"><img src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_circle_color-512.png" alt="LinkedInlogo" style="width: 40px;height:40px;"></a></li>
+          <li><a href="https://cdn0.iconfinder.com/data/icons/internet-line/512/Internet_Line-02-512.png"><img src="https://cdn0.iconfinder.com/data/icons/internet-line/512/Internet_Line-02-512.png" alt="internetlogo" style="width: 40px;height: 40px;"></a></li>
+        </ul>
+      </div>
+    </body>
+</html>
