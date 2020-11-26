@@ -18,3 +18,9 @@ var classCode = {'ACIT 1620' : 'Web Fundamental Technologies'}
 var className = Object.keys(classCode)[0]; //key
 var value = classCode[className] //value
     console.log('Yes I am taking the course: ${classCode} – ${className}');
+
+findCourse(courseList) {
+    return code;
+
+};
+
